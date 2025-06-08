@@ -1,6 +1,6 @@
 {
     "name": "ターゲット1900",
-    "short_name": "target",
+    "short_name": "ターゲット1900",
     "start_url": "/target1900_cache_test/index.html",
     "display": "standalone",
     "scope": "/target1900_cache_test/",
