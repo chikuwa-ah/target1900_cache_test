@@ -166,8 +166,8 @@ select#range-select:focus {
 .card {
     background-color: #75cad5;
     color: white;
-    width: 80vw;
-    height: 50vh;
+    width: 80%;
+    height: 50%;
     max-width: 320px;
     max-height: 320px;
     border-radius: 16px;
@@ -232,8 +232,8 @@ select#range-select:focus {
 .end-button {
     background-color: #75cad5;
     color: white;
-    width: 80vw;
-    height: 40vh;
+    width: 80%;
+    height: 40%;
     max-width: 320px;
     max-height: 1500px;
     border-radius: 16px;
