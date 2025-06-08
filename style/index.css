@@ -4,5 +4,5 @@ body {
     justify-content: center;
     min-height: 100vh;
     padding: 2rem;
-    overflow-x: hidden;
+    overflow: hidden;
 }

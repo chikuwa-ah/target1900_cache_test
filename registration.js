@@ -5,21 +5,3 @@ if ('serviceWorker' in navigator) {
             .catch(err => console.error('Service Worker registration failed:', err));
     });
 }
-
-function fixViewportHeight() {
-    const vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-}
-window.addEventListener('resize', fixViewportHeight);
-window.addEventListener('load', fixViewportHeight);
-
-if (window.matchMedia('(display-mode: standalone)').matches) {
-    document.documentElement.style.width = '100vw';
-    document.body.style.width = '100vw';
-    document.body.style.overflowX = 'hidden';
-
-    if (document.documentElement.scrollWidth > window.innerWidth) {
-        document.body.style.transform = `scale(${window.innerWidth / document.documentElement.scrollWidth})`;
-        document.body.style.transformOrigin = 'top left';
-    }
-}
