@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>苦手単語一覧 | ターゲット1900</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/wordList.css">
+    <script src="./script/words.js"></script>
+    <script src="./script/weakWordList/main.js"></script>
+</head>
+
+<body>
+    <section class="head">
+        <header>
+            <a href="./index.html">
+                <h1>Target1900</h1>
+            </a>
+        </header>
+
+        <h1 class="sub-title">苦手単語</h1>
+    </section>
+
+    <section class="display">
+        <div class="table">
+            <div class="container" id="wordList">
+                <!-- 単語テーブル -->
+            </div>
+        </div>
+    </section>
+
+    <div class="pop-overlay" onclick="closePopUp();"></div>
+    <div class="pop-up">
+        <h2 id="pop-word">Word</h2>
+        <p id="pop-mean">意味耳耳</p>
+    </div>
+</body>
+
+</html>
