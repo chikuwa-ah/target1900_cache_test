@@ -6,9 +6,21 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-function fixViewportHeight() {
-    const vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
+// function fixViewportHeight() {
+//     const vh = window.innerHeight * 0.01;
+//     document.documentElement.style.setProperty('--vh', `${vh}px`);
+// }
+// window.addEventListener('resize', fixViewportHeight);
+// window.addEventListener('load', fixViewportHeight);
+
+if (window.matchMedia('(display-mode: standalone)').matches) {
+    document.documentElement.style.width = '100vw';
+    document.body.style.width = '100vw';
+    document.body.style.overflowX = 'hidden';
+
+    // ページの幅が想定外なら修正
+    if (document.documentElement.scrollWidth > window.innerWidth) {
+        document.body.style.transform = `scale(${window.innerWidth / document.documentElement.scrollWidth})`;
+        document.body.style.transformOrigin = 'top left';
+    }
 }
-window.addEventListener('resize', fixViewportHeight);
-window.addEventListener('load', fixViewportHeight);
