@@ -1,8 +1,9 @@
 {
     "name": "ターゲット1900",
     "short_name": "target",
-    "start_url": "/index.html",
+    "start_url": "/target1900_cache_test/index.html",
     "display": "standalone",
+    "scope": "/target1900_cache_test/",
     "icons": [
         {
             "src": "icons/icon-192.png",
