@@ -8,16 +8,15 @@ if ('serviceWorker' in navigator) {
 
 if (window.matchMedia('(display-mode: standalone)').matches) {
     document.addEventListener('DOMContentLoaded', () => {
-        document.documentElement.style.width = '100%';
+        // スケールを1に固定（小さく表示されるのを防ぐ）
+        document.body.style.transform = 'scale(1)';
+        document.body.style.transformOrigin = 'top left';
+        document.body.style.zoom = 'reset'; // Android対策
         document.body.style.width = '100%';
-        document.body.style.overflowX = 'hidden';
-
-        // 遅延補正（レイアウト確定後に実行）
-        setTimeout(() => {
-            if (document.documentElement.scrollWidth > window.innerWidth) {
-                document.body.style.transform = `scale(${window.innerWidth / document.documentElement.scrollWidth})`;
-                document.body.style.transformOrigin = 'top left';
-            }
-        }, 50);
+        document.body.style.height = '100%';
+        document.documentElement.style.width = '100%';
+        document.documentElement.style.height = '100%';
+        document.documentElement.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden';
     });
 }

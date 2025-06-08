@@ -12,15 +12,15 @@ header {
 @media all and (display-mode: standalone) {
     html, body {
         width: 100% !important;
-        max-width: 100% !important;
-        overflow-x: hidden !important;
-        margin: 0 !important;
-        padding: 0 !important;
+        height: 100% !important;
+        overflow: hidden !important;
+        transform: none !important;
     }
 
-    body>*, section, div, header, .head {
-        max-width: 100% !important;
-        overflow-x: hidden !important;
+    body {
+        transform: none !important;
+        transform-origin: top left !important;
+        zoom: reset !important;
     }
 }
 
