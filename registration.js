@@ -5,3 +5,10 @@ if ('serviceWorker' in navigator) {
             .catch(err => console.error('Service Worker registration failed:', err));
     });
 }
+
+function fixViewportHeight() {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+window.addEventListener('resize', fixViewportHeight);
+window.addEventListener('load', fixViewportHeight);

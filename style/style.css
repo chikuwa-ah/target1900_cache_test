@@ -22,6 +22,9 @@ html, body {
     }
 }
 
+body {
+    min-height: calc(var(--vh, 1vh) * 100);
+}
 
 header {
     margin-bottom: 3rem;
