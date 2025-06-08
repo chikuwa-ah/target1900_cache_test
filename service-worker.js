@@ -17,20 +17,20 @@ const CACHE_NAME = 'my-pwa-cache-v1';
 // ];
 
 const URLS_TO_CACHE = [
-    'chikuwa-ah.github.io/target1900_cache_test/',
-    'chikuwa-ah.github.io/target1900_cache_test/index.html',
-    'chikuwa-ah.github.io/target1900_cache_test/card.html',
-    'chikuwa-ah.github.io/target1900_cache_test/weakWordList.html',
-    'chikuwa-ah.github.io/target1900_cache_test/wordList.html',
-    'chikuwa-ah.github.io/target1900_cache_test/style/style.css',
-    'chikuwa-ah.github.io/target1900_cache_test/style/card.css',
-    'chikuwa-ah.github.io/target1900_cache_test/style/index.css',
-    'chikuwa-ah.github.io/target1900_cache_test/style/wordList.css',
-    'chikuwa-ah.github.io/target1900_cache_test/script/words.js',
-    'chikuwa-ah.github.io/target1900_cache_test/script/card/main.js',
-    'chikuwa-ah.github.io/target1900_cache_test/script/weakWordList/main.js',
-    'chikuwa-ah.github.io/target1900_cache_test/script/wordList/main.js',
-    'chikuwa-ah.github.io/target1900_cache_test/registration.js'
+    '/',
+    '/target1900_cache_test/index.html',
+    '/target1900_cache_test/card.html',
+    '/target1900_cache_test/weakWordList.html',
+    '/target1900_cache_test/wordList.html',
+    '/target1900_cache_test/style/style.css',
+    '/target1900_cache_test/style/card.css',
+    '/target1900_cache_test/style/index.css',
+    '/target1900_cache_test/style/wordList.css',
+    '/target1900_cache_test/script/words.js',
+    '/target1900_cache_test/script/card/main.js',
+    '/target1900_cache_test/script/weakWordList/main.js',
+    '/target1900_cache_test/script/wordList/main.js',
+    '/target1900_cache_test/registration.js'
 ]
 
 self.addEventListener('install', event => {
