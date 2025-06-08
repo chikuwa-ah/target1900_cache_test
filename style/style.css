@@ -167,3 +167,21 @@ a.button-link:active {
 #pop-mean {
     font-size: 1.1em;
 }
+
+html, body {
+    transform: none !important;
+    zoom: 1 !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+@media all and (display-mode: standalone) {
+    html, body {
+        transform: scale(1) !important;
+        transform-origin: top left !important;
+        zoom: 1 !important;
+    }
+}

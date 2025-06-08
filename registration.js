@@ -20,3 +20,16 @@ if (window.matchMedia('(display-mode: standalone)').matches) {
         document.body.style.overflow = 'hidden';
     });
 }
+
+if (window.matchMedia('(display-mode: standalone)').matches) {
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            const docW = document.documentElement.clientWidth;
+            const winW = window.innerWidth;
+            if (docW < winW * 0.9) {
+                // 明らかに縮小表示されている → 強制再読み込み
+                window.location.reload();
+            }
+        }, 100);
+    });
+}
