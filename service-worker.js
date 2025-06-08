@@ -1,23 +1,7 @@
-const CACHE_NAME = 'my-pwa-cache-v1';
-// const URLS_TO_CACHE = [
-//     '/',
-//     '/index.html',
-//     '/card.html',
-//     '/weakWordList.html',
-//     '/wordList.html',
-//     '/style/style.css',
-//     '/style/card.css',
-//     '/style/index.css',
-//     '/style/wordList.css',
-//     '/script/words.js',
-//     '/script/card/main.js',
-//     '/script/weakWordList/main.js',
-//     '/script/wordList/main.js',
-//     '/registration.js'
-// ];
+const CACHE_NAME = 'my-pwa-cache-v2';
 
 const URLS_TO_CACHE = [
-    '/',
+    '/target1900_cache_test/',
     '/target1900_cache_test/index.html',
     '/target1900_cache_test/card.html',
     '/target1900_cache_test/weakWordList.html',
@@ -31,14 +15,14 @@ const URLS_TO_CACHE = [
     '/target1900_cache_test/script/weakWordList/main.js',
     '/target1900_cache_test/script/wordList/main.js',
     '/target1900_cache_test/registration.js'
-]
+];
 
 self.addEventListener('install', event => {
     event.waitUntil(
         caches.open(CACHE_NAME).then(cache => {
             return cache.addAll(URLS_TO_CACHE);
         }).catch(err => {
-            console.error('キャッシュ中にエラーが発生しました:', err);
+            console.error('キャッシュ中にエラー:', err);
         })
     );
 });
